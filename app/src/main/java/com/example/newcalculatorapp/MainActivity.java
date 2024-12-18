@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(k);
             }
         });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent f=new Intent(getApplicationContext(),SubtractionActivity.class);
+                startActivity(f);
+            }
+        });
 
     }
 }

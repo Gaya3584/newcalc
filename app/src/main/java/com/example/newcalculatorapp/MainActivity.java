@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(l);
             }
         });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent m=new Intent(getApplicationContext(),SubtractionActivity.class);
+                startActivity(m);
+            }
+        });
 
     }
 }

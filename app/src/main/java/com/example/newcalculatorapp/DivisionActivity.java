@@ -1,6 +1,5 @@
 package com.example.newcalculatorapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,7 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class AddActivity extends AppCompatActivity {
+public class DivisionActivity extends AppCompatActivity {
     AppCompatButton b1;
     EditText et1,et2;
     TextView t1;
@@ -24,11 +23,11 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_add);
-        b1=(AppCompatButton) findViewById(R.id.bt3);
-        et1=(EditText)findViewById(R.id.e3);
-        et2=(EditText)findViewById(R.id.e4);
-        t1=(TextView) findViewById(R.id.e5);
+        setContentView(R.layout.activity_division);
+        b1=(AppCompatButton) findViewById(R.id.btd3);
+        et1=(EditText)findViewById(R.id.ed3);
+        et2=(EditText)findViewById(R.id.ed4);
+        t1=(TextView) findViewById(R.id.ed5);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,13 +35,12 @@ public class AddActivity extends AppCompatActivity {
                 s2=et2.getText().toString();
                 num1=Integer.parseInt(s1);
                 num2=Integer.parseInt(s2);
-                sum=num1+num2;
+                sum=num1/num2;
                 result=String.valueOf(sum);
                 t1.setText(result);
                 Toast.makeText(getApplicationContext(),result,Toast.LENGTH_LONG).show();
             }
         });
-
 
     }
 }
